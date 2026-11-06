@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <title>Disclaimer &amp; Terms of Use – My NCC: Cadet Management Ecosystem</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0a1630;--navy2:#0f2147;--navy3:#14295a;--gold:#e6c46f;--gold2:#c49a3a;--ink:#eef1f8;--mute:#a9b4cc;--line:rgba(230,196,111,.18);color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-behavior:smooth;scroll-padding-top:20px}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.75;font-size:16px;background:radial-gradient(900px 500px at 90% -5%,rgba(230,196,111,.13),transparent 60%),radial-gradient(800px 600px at -10% 20%,rgba(37,70,150,.35),transparent 60%),linear-gradient(180deg,var(--navy) 0%,#07101f 100%);background-attachment:fixed}
-.hero{text-align:center;padding:calc(56px + env(safe-area-inset-top,0px)) 20px 70px;position:relative}
+/* ✅ NEW: language show/hide */
+html[data-lang="en"] .hi{display:none!important}
+html[data-lang="hi"] .en{display:none!important}
+body{margin:0;color:var(--ink);font-family:Inter,"Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.75;font-size:16px;background:radial-gradient(900px 500px at 90% -5%,rgba(230,196,111,.13),transparent 60%),radial-gradient(800px 600px at -10% 20%,rgba(37,70,150,.35),transparent 60%),linear-gradient(180deg,var(--navy) 0%,#07101f 100%);background-attachment:fixed}
+/* ✅ NEW: language switch button */
+.lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:14px;z-index:30;display:flex;padding:4px;border-radius:999px;background:rgba(10,22,48,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.lang button{border:0;background:transparent;color:var(--mute);font:600 13px Inter,"Noto Sans Devanagari",sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1405}
+.hero{text-align:center;padding:calc(64px + env(safe-area-inset-top,0px)) 20px 70px;position:relative}
 .hero::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(420px,70%);height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-/* ✅ FIXED: rounded-square frame, ring हटाया ताकि icon का अपना gold border न कटे */
 .seal{width:116px;height:116px;margin:0 auto 22px;border-radius:26px;box-shadow:0 18px 44px rgba(230,196,111,.30),0 0 0 1px rgba(230,196,111,.25)}
 .seal div{width:100%;height:100%;border-radius:26px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .seal img{width:100%;height:100%;object-fit:contain;display:block}
 .seal svg{width:46px;height:46px}
 .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:clamp(30px,6vw,50px);font-weight:700;line-height:1.15;background:linear-gradient(180deg,#fff 0%,#e9d9a8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{margin:0;font-family:"Playfair Display","Noto Sans Devanagari",Georgia,serif;font-size:clamp(30px,6vw,50px);font-weight:700;line-height:1.2;background:linear-gradient(180deg,#fff 0%,#e9d9a8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .app{margin:14px auto 0;max-width:640px;color:var(--mute);font-size:17px}
 .app b{color:var(--gold);font-weight:600}
 .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
@@ -29,7 +35,7 @@ h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:clamp(30px,6v
 .fact{padding:18px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 14px 34px rgba(0,0,0,.3)}
 .fact .e{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px}
 .fact b{display:block;font-size:15px}
-.fact span{font-size:13.5px;color:var(--mute)}
+.fact .d{display:block;font-size:13.5px;color:var(--mute)}
 .critical{position:relative;margin-bottom:22px;padding:24px 24px 24px 28px;border-radius:20px;border:1px solid rgba(230,196,111,.5);background:linear-gradient(135deg,rgba(230,196,111,.16),rgba(230,196,111,.04));box-shadow:0 18px 44px rgba(0,0,0,.35)}
 .critical::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:4px;background:linear-gradient(180deg,var(--gold),var(--gold2))}
 .critical h3{margin:0 0 8px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
@@ -56,47 +62,64 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:30px;paddin
 </head>
 <body>
 
+<!-- ✅ NEW: language switch -->
+<div class="lang" role="group" aria-label="Language">
+<button type="button" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+<button type="button" id="btn-hi" aria-pressed="false" onclick="setLang('hi')">हिं</button>
+</div>
+
 <div class="hero">
 <div class="seal"><div>
-<!-- ✅ FIXED: आपका icon, पूरा दिखेगा। File का नाम myncc-icon.png -->
 <img src="myncc-icon.png" alt="My NCC icon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';this.parentNode.style.background='linear-gradient(160deg,#14295a,#0a1630)'">
 <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="#e6c46f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6l8-3z"/><path d="M8.6 12.2l2.5 2.5 4.4-5"/></svg>
 </div></div>
-<span class="eyebrow">Legal Notice</span>
-<h1>Disclaimer &amp; Terms of Use</h1>
+<span class="eyebrow"><span class="en">Legal Notice</span><span class="hi">कानूनी सूचना</span></span>
+<h1><span class="en">Disclaimer &amp; Terms of Use</span><span class="hi">अस्वीकरण और उपयोग की शर्तें</span></h1>
 <p class="app"><b>My NCC: Cadet Management Ecosystem</b></p>
 <div class="meta">
-<span class="pill">Developer: Vasu Thakor</span>
-<span class="pill">Last Updated: November 2026</span>
+<span class="pill"><span class="en">Developer: Vasu Thakor</span><span class="hi">डेवलपर: Vasu Thakor</span></span>
+<span class="pill"><span class="en">Last Updated: November 2026</span><span class="hi">अंतिम अपडेट: नवंबर 2026</span></span>
 </div>
 </div>
 
 <div class="wrap">
 
 <div class="facts">
-<div class="fact"><div class="e">🛡️</div><b>Unofficial App</b><span>Independent &amp; privately developed.</span></div>
-<div class="fact"><div class="e">🏛️</div><b>Not Govt. Affiliated</b><span>No link with DG NCC or MoD.</span></div>
-<div class="fact"><div class="e">🔐</div><b>AES-256-GCM</b><span>Sensitive data is encrypted.</span></div>
-<div class="fact"><div class="e">🚫</div><b>No Third-Party Sharing</b><span>Never sold, rented or shared.</span></div>
+<div class="fact"><div class="e">🛡️</div>
+<b><span class="en">Unofficial App</span><span class="hi">अनधिकृत ऐप</span></b>
+<span class="d"><span class="en">Independent &amp; privately developed.</span><span class="hi">स्वतंत्र और निजी रूप से विकसित।</span></span></div>
+<div class="fact"><div class="e">🏛️</div>
+<b><span class="en">Not Govt. Affiliated</span><span class="hi">सरकार से संबद्ध नहीं</span></b>
+<span class="d"><span class="en">No link with DG NCC or MoD.</span><span class="hi">DG NCC या रक्षा मंत्रालय से कोई संबंध नहीं।</span></span></div>
+<div class="fact"><div class="e">🔐</div>
+<b>AES-256-GCM</b>
+<span class="d"><span class="en">Sensitive data is encrypted.</span><span class="hi">संवेदनशील डेटा एन्क्रिप्टेड रहता है।</span></span></div>
+<div class="fact"><div class="e">🚫</div>
+<b><span class="en">No Third-Party Sharing</span><span class="hi">कोई थर्ड-पार्टी शेयरिंग नहीं</span></b>
+<span class="d"><span class="en">Never sold, rented or shared.</span><span class="hi">कभी बेचा, किराए पर या साझा नहीं किया जाता।</span></span></div>
 </div>
 
 <div class="critical">
-<h3>Critical Notice</h3>
-<p>This application is <b>NOT affiliated with, endorsed by, sponsored by, or in any way officially connected to</b> the <b>Directorate General NCC (DG NCC)</b>, the <b>Ministry of Defence</b>, or the <b>Government of India</b>.</p>
+<h3><span class="en">Critical Notice</span><span class="hi">महत्वपूर्ण सूचना</span></h3>
+<p class="en">This application is <b>NOT affiliated with, endorsed by, sponsored by, or in any way officially connected to</b> the <b>Directorate General NCC (DG NCC)</b>, the <b>Ministry of Defence</b>, or the <b>Government of India</b>.</p>
+<p class="hi">यह एप्लिकेशन <b>राष्ट्रीय कैडेट कोर महानिदेशालय (DG NCC)</b>, <b>रक्षा मंत्रालय</b> या <b>भारत सरकार</b> से <b>किसी भी रूप में संबद्ध, समर्थित, प्रायोजित या आधिकारिक रूप से जुड़ा हुआ नहीं है।</b></p>
 </div>
 
 <section id="s1">
-<h2><span class="n">1</span>Unofficial &amp; Independent Application</h2>
-<p>“My NCC: Cadet Management Ecosystem” is an independent, privately developed utility application designed to assist cadets with their daily administration, attendance, and routines.</p>
+<h2><span class="n">1</span><span class="en">Unofficial &amp; Independent Application</span><span class="hi">अनधिकृत और स्वतंत्र एप्लिकेशन</span></h2>
+<p class="en">“My NCC: Cadet Management Ecosystem” is an independent, privately developed utility application designed to assist cadets with their daily administration, attendance, and routines.</p>
+<p class="hi">“My NCC: Cadet Management Ecosystem” एक स्वतंत्र, निजी रूप से विकसित यूटिलिटी एप्लिकेशन है, जो कैडेट्स को उनके रोज़मर्रा के प्रशासनिक कार्यों, उपस्थिति और दिनचर्या में सहायता देने के लिए बनाया गया है।</p>
 </section>
 
 <section id="s2">
-<h2><span class="n">2</span>Purpose of the App</h2>
-<p>This app operates strictly as a private management and utility tool. It provides features like <b>QR-based attendance</b>, <b>PIN authentication</b>, and <b>PDF form generation</b> to digitize local unit tasks. It does not represent any government entity and should not be considered an official military or government software.</p>
+<h2><span class="n">2</span><span class="en">Purpose of the App</span><span class="hi">ऐप का उद्देश्य</span></h2>
+<p class="en">This app operates strictly as a private management and utility tool. It provides features like <b>QR-based attendance</b>, <b>PIN authentication</b>, and <b>PDF form generation</b> to digitize local unit tasks. It does not represent any government entity and should not be considered an official military or government software.</p>
+<p class="hi">यह ऐप केवल एक निजी प्रबंधन और यूटिलिटी टूल के रूप में काम करता है। स्थानीय यूनिट के कार्यों को डिजिटल बनाने के लिए इसमें <b>QR-आधारित उपस्थिति</b>, <b>PIN ऑथेंटिकेशन</b> और <b>PDF फ़ॉर्म जनरेशन</b> जैसे फीचर दिए गए हैं। यह किसी भी सरकारी संस्था का प्रतिनिधित्व नहीं करता और इसे आधिकारिक सैन्य या सरकारी सॉफ़्टवेयर नहीं समझा जाना चाहिए।</p>
 </section>
 
 <section id="s3">
-<h2><span class="n">3</span>Data Security &amp; Cloud Storage</h2>
+<h2><span class="n">3</span><span class="en">Data Security &amp; Cloud Storage</span><span class="hi">डेटा सुरक्षा और क्लाउड स्टोरेज</span></h2>
+<div class="en">
 <p>We prioritize user privacy with the highest security standards:</p>
 <ul class="l">
 <li><b>Military-Grade Encryption:</b> All sensitive data is secured using AES-256-GCM encryption before being transmitted.</li>
@@ -104,23 +127,36 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:30px;paddin
 <li><b>Zero-Knowledge Architecture:</b> The data is deeply encrypted in such a way that even the developer cannot read or access the personal records stored on the server.</li>
 <li><b>No Third-Party Sharing:</b> Your data is never sold, rented, or shared with external marketing agencies.</li>
 </ul>
+</div>
+<div class="hi">
+<p>हम उच्चतम सुरक्षा मानकों के साथ यूज़र की गोपनीयता को प्राथमिकता देते हैं:</p>
+<ul class="l">
+<li><b>मिलिट्री-ग्रेड एन्क्रिप्शन:</b> सभी संवेदनशील डेटा को भेजे जाने से पहले AES-256-GCM एन्क्रिप्शन से सुरक्षित किया जाता है।</li>
+<li><b>निजी सर्वर:</b> डेटा डेवलपर द्वारा कॉन्फ़िगर किए गए Firebase/Firestore और GitHub प्राइवेट रिपॉज़िटरी के ज़रिए सिंक होता है। कोई भी डेटा किसी आधिकारिक सरकारी सर्वर पर स्टोर या ट्रांसमिट नहीं किया जाता।</li>
+<li><b>Zero-Knowledge आर्किटेक्चर:</b> डेटा इस तरह गहराई से एन्क्रिप्टेड रहता है कि सर्वर पर रखे व्यक्तिगत रिकॉर्ड को डेवलपर भी न पढ़ सकता है, न एक्सेस कर सकता है।</li>
+<li><b>कोई थर्ड-पार्टी शेयरिंग नहीं:</b> आपका डेटा कभी बेचा, किराए पर दिया या बाहरी मार्केटिंग एजेंसियों के साथ साझा नहीं किया जाता।</li>
+</ul>
+</div>
 </section>
 
 <section id="s4">
-<h2><span class="n">4</span>Intellectual Property &amp; Graphics</h2>
-<p>All UI designs, icons, color themes (Navy Blue &amp; Gold), and graphics used within this application are custom-made and are the intellectual property of the developer. This application strictly prohibits the use of the official State Emblem of India or any copyrighted government trademarks.</p>
+<h2><span class="n">4</span><span class="en">Intellectual Property &amp; Graphics</span><span class="hi">बौद्धिक संपदा और ग्राफ़िक्स</span></h2>
+<p class="en">All UI designs, icons, color themes (Navy Blue &amp; Gold), and graphics used within this application are custom-made and are the intellectual property of the developer. This application strictly prohibits the use of the official State Emblem of India or any copyrighted government trademarks.</p>
+<p class="hi">इस एप्लिकेशन में इस्तेमाल किए गए सभी UI डिज़ाइन, आइकन, कलर थीम (नेवी ब्लू और गोल्ड) और ग्राफ़िक्स कस्टम-मेड हैं और डेवलपर की बौद्धिक संपदा हैं। यह एप्लिकेशन भारत के राजकीय चिह्न (State Emblem) या किसी भी कॉपीराइट प्राप्त सरकारी ट्रेडमार्क के उपयोग को सख़्ती से प्रतिबंधित करता है।</p>
 </section>
 
 <section id="s5">
-<h2><span class="n">5</span>Limitation of Liability</h2>
-<p>The app is provided on an “as-is” basis. While we use advanced encryption and robust architecture to ensure smooth functionality, the developer assumes no legal liability for any data loss, server downtime, or administrative discrepancies resulting from the use of this unofficial tool.</p>
+<h2><span class="n">5</span><span class="en">Limitation of Liability</span><span class="hi">दायित्व की सीमा</span></h2>
+<p class="en">The app is provided on an “as-is” basis. While we use advanced encryption and robust architecture to ensure smooth functionality, the developer assumes no legal liability for any data loss, server downtime, or administrative discrepancies resulting from the use of this unofficial tool.</p>
+<p class="hi">यह ऐप “जैसा है, वैसा” (as-is) आधार पर उपलब्ध कराया गया है। सुचारू कामकाज के लिए हम उन्नत एन्क्रिप्शन और मज़बूत आर्किटेक्चर का उपयोग करते हैं, फिर भी इस अनधिकृत टूल के उपयोग से होने वाली किसी भी डेटा हानि, सर्वर डाउनटाइम या प्रशासनिक विसंगति के लिए डेवलपर कोई कानूनी दायित्व नहीं लेता।</p>
 </section>
 
 <section id="s6">
-<h2><span class="n">6</span>Contact Information</h2>
-<p>For any legal inquiries, data deletion requests, or support, please contact the developer at:</p>
+<h2><span class="n">6</span><span class="en">Contact Information</span><span class="hi">संपर्क जानकारी</span></h2>
+<p class="en">For any legal inquiries, data deletion requests, or support, please contact the developer at:</p>
+<p class="hi">किसी भी कानूनी पूछताछ, डेटा डिलीशन अनुरोध या सहायता के लिए कृपया डेवलपर से यहाँ संपर्क करें:</p>
 <div class="contact">
-<div class="crow"><div class="ci">✉️</div><div><small>Email</small><a href="mailto:support.tech.promptx@gmail.com">support.tech.promptx@gmail.com</a></div></div>
+<div class="crow"><div class="ci">✉️</div><div><small><span class="en">Email</span><span class="hi">ईमेल</span></small><a href="mailto:support.tech.promptx@gmail.com">support.tech.promptx@gmail.com</a></div></div>
 <div class="crow"><div class="ci">📸</div><div><small>Instagram</small><a href="https://instagram.com/PromptXTech" target="_blank" rel="noopener">@PromptXTech</a></div></div>
 </div>
 </section>
@@ -128,5 +164,28 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:30px;paddin
 <footer>© 2026 Vasu Thakor · PromptX Tech · My NCC: Cadet Management Ecosystem</footer>
 </div>
 
+<!-- ✅ NEW: language switch script -->
+<script>
+function setLang(l){
+  if(l!=='hi'&&l!=='en'){l='en';}
+  document.documentElement.setAttribute('data-lang',l);
+  document.documentElement.lang=l;
+  document.getElementById('btn-en').setAttribute('aria-pressed',l==='en');
+  document.getElementById('btn-hi').setAttribute('aria-pressed',l==='hi');
+  document.title=(l==='hi'?'अस्वीकरण और उपयोग की शर्तें':'Disclaimer & Terms of Use')+' – My NCC: Cadet Management Ecosystem';
+  try{localStorage.setItem('myncc-lang',l);}catch(e){}
+}
+(function(){
+  var l=null;
+  try{l=new URLSearchParams(location.search).get('lang');}catch(e){}
+  if(l!=='hi'&&l!=='en'){
+    try{l=localStorage.getItem('myncc-lang');}catch(e){}
+  }
+  if(l!=='hi'&&l!=='en'){
+    l=((navigator.language||'').toLowerCase().indexOf('hi')===0)?'hi':'en';
+  }
+  setLang(l);
+})();
+</script>
 </body>
 </html>
