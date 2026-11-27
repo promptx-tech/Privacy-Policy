@@ -92,8 +92,8 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:30px;paddin
 <b><span class="en">Not Govt. Affiliated</span><span class="hi">सरकार से संबद्ध नहीं</span></b>
 <span class="d"><span class="en">No link with DG NCC or MoD.</span><span class="hi">DG NCC या रक्षा मंत्रालय से कोई संबंध नहीं।</span></span></div>
 <div class="fact"><div class="e">🔐</div>
-<b>AES-256-GCM</b>
-<span class="d"><span class="en">Sensitive data is encrypted.</span><span class="hi">संवेदनशील डेटा एन्क्रिप्टेड रहता है।</span></span></div>
+<b><span class="en">E2EE Chat</span><span class="hi">E2EE चैट</span></b>
+<span class="d"><span class="en">Chat messages are end-to-end encrypted.</span><span class="hi">चैट मैसेज एंड-टू-एंड एन्क्रिप्टेड हैं।</span></span></div>
 <div class="fact"><div class="e">🚫</div>
 <b><span class="en">No Third-Party Sharing</span><span class="hi">कोई थर्ड-पार्टी शेयरिंग नहीं</span></b>
 <span class="d"><span class="en">Never sold, rented or shared.</span><span class="hi">कभी बेचा, किराए पर या साझा नहीं किया जाता।</span></span></div>
@@ -122,18 +122,18 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:30px;paddin
 <div class="en">
 <p>We prioritize user privacy with the highest security standards:</p>
 <ul class="l">
-<li><b>Military-Grade Encryption:</b> All sensitive data is secured using AES-256-GCM encryption before being transmitted.</li>
-<li><b>Private Servers:</b> Data is synchronized using Firebase/Firestore and Backblaze (cloud storage) configured by the developer. GitHub is used only to display previously uploaded data, and its control will soon be revoked and handed over entirely to Backblaze. All new data storage goes to Backblaze only, not to GitHub. No data is stored on or transmitted to any official government servers.</li>
-<li><b>Zero-Knowledge Architecture:</b> The data is deeply encrypted in such a way that even the developer cannot read or access the personal records stored on the server.</li>
+<li><b>End-to-End Encrypted Chat:</b> Only chat messaging is end-to-end encrypted (E2EE) using AES-256-GCM, so chat messages can be read only by the participants of the conversation.</li>
+<li><b>Private Servers:</b> Data is synchronized using Firebase/Firestore and Backblaze (cloud storage) configured by the developer. All data and files are stored on Backblaze and Firebase only. No data is stored on or transmitted to any official government servers.</li>
+<li><b>Server Data &amp; Developer Access:</b> Apart from chat messages, other app data is stored securely on the server and is not end-to-end encrypted. The developer does not view this data without a valid reason, but, technically, the developer does have the ability to access it.</li>
 <li><b>No Third-Party Sharing:</b> Your data is never sold, rented, or shared with external marketing agencies.</li>
 </ul>
 </div>
 <div class="hi">
 <p>हम उच्चतम सुरक्षा मानकों के साथ यूज़र की गोपनीयता को प्राथमिकता देते हैं:</p>
 <ul class="l">
-<li><b>मिलिट्री-ग्रेड एन्क्रिप्शन:</b> सभी संवेदनशील डेटा को भेजे जाने से पहले AES-256-GCM एन्क्रिप्शन से सुरक्षित किया जाता है।</li>
-<li><b>निजी सर्वर:</b> डेटा डेवलपर द्वारा कॉन्फ़िगर किए गए Firebase/Firestore और Backblaze (क्लाउड स्टोरेज) के ज़रिए सिंक होता है। GitHub सिर्फ़ पुराने अपलोड किए गए डेटा को दिखाने के लिए उपयोग होता है, जिसे जल्द ही रिवोक करके पूरा कंट्रोल Backblaze को दे दिया जाएगा। अब जो भी नया डेटा स्टोर होगा, वह सिर्फ़ Backblaze में जाएगा, GitHub पर नहीं। कोई भी डेटा किसी आधिकारिक सरकारी सर्वर पर स्टोर या ट्रांसमिट नहीं किया जाता।</li>
-<li><b>Zero-Knowledge आर्किटेक्चर:</b> डेटा इस तरह गहराई से एन्क्रिप्टेड रहता है कि सर्वर पर रखे व्यक्तिगत रिकॉर्ड को डेवलपर भी न पढ़ सकता है, न एक्सेस कर सकता है।</li>
+<li><b>एंड-टू-एंड एन्क्रिप्टेड चैट:</b> सिर्फ़ चैट मैसेजिंग AES-256-GCM के साथ एंड-टू-एंड एन्क्रिप्टेड (E2EE) है, इसलिए चैट मैसेज केवल बातचीत में शामिल लोग ही पढ़ सकते हैं।</li>
+<li><b>निजी सर्वर:</b> डेटा डेवलपर द्वारा कॉन्फ़िगर किए गए Firebase/Firestore और Backblaze (क्लाउड स्टोरेज) के ज़रिए सिंक होता है। सारा डेटा और फ़ाइलें सिर्फ़ Backblaze और Firebase पर स्टोर होती हैं। कोई भी डेटा किसी आधिकारिक सरकारी सर्वर पर स्टोर या ट्रांसमिट नहीं किया जाता।</li>
+<li><b>सर्वर डेटा और डेवलपर की पहुँच:</b> चैट मैसेज के अलावा बाकी ऐप डेटा सर्वर पर सुरक्षित रखा जाता है और एंड-टू-एंड एन्क्रिप्टेड नहीं है। डेवलपर बिना किसी वजह के इस डेटा को नहीं देखता, लेकिन तकनीकी रूप से डेवलपर के पास इसे एक्सेस करने की क्षमता है।</li>
 <li><b>कोई थर्ड-पार्टी शेयरिंग नहीं:</b> आपका डेटा कभी बेचा, किराए पर दिया या बाहरी मार्केटिंग एजेंसियों के साथ साझा नहीं किया जाता।</li>
 </ul>
 </div>
